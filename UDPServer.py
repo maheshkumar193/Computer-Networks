@@ -8,6 +8,6 @@ while True:
   message, clientAddress = serverSocket.recvfrom(2048)
   message = message.decode()
   print('client from:',clientAddress,' client sent:', message)
-  modifiedMessage = message``.upper()
+  modifiedMessage = message.upper()
   serverSocket.sendto(modifiedMessage.encode(), clientAddress)
   # IP address and socket port for server are choosen by OS and attached to packet before sending
